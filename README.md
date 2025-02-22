@@ -30,20 +30,16 @@
 
 1. Clone este repositório:
 ```
-git clone https://github.com/darneees/nome-do-repositorio.git
+git clone https://github.com/darneees/LinguaWay.git
 ```
 
 2.Abra o arquivo index.html no navegador.
 📢 Observação: Este projeto foi desenvolvido como parte de um teste técnico e segue as diretrizes exigidas, utilizando apenas HTML e CSS.
 
-
 ---
 
 ### 🔹 **Ajustes Feitos:**
-✔ **Removi qualquer menção a JavaScript** para manter alinhado ao teste.  
 ✔ **Incluí uma seção de "Tecnologias Utilizadas"** apenas com **HTML5 e CSS3**.  
 ✔ **Mantive a tabela de cores e a hierarquia tipográfica** para destacar o design.  
 ✔ **Adicionei uma nota no final** reforçando que foi feito para um teste técnico.  
-
-Dessa forma, o README fica bem documentado, direto ao ponto e profissional. Boa sorte no processo seletivo! 🚀😃
 
