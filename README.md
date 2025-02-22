@@ -1,4 +1,4 @@
-# 🌍 Landing Page - Lingua+
+# 🌍 Landing Page - LinguaWay
 
 ---
 
