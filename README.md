@@ -21,7 +21,6 @@ Este repositório contém o código-fonte de uma **landing page responsiva** par
 | **Subtítulo (H2, H3)** | Montserrat | SemiBold (600) | 28px - 36px |
 | **Parágrafo (P)** | Montserrat | Regular (400) | 16px - 18px |
 | **Botões (CTA)** | Raleway | Bold (700) | 18px - 22px (Uppercase) |
-| **Menus/Legendas** | Montserrat | Light (300) ou Medium (500) | 14px - 16px |
 
 ## 📌 Tecnologias Utilizadas
 
@@ -35,13 +34,7 @@ Este repositório contém o código-fonte de uma **landing page responsiva** par
 git clone https://github.com/darneees/LinguaWay.git
 ```
 
-2.Abra o arquivo index.html no navegador.
+2. Abra o arquivo index.html no navegador.
+
 📢 Observação: Este projeto foi desenvolvido como parte de um teste técnico e segue as diretrizes exigidas, utilizando apenas HTML e CSS.
-
----
-
-### 🔹 **Ajustes Feitos:**
-✔ **Incluí uma seção de "Tecnologias Utilizadas"** apenas com **HTML5 e CSS3**.  
-✔ **Mantive a tabela de cores e a hierarquia tipográfica** para destacar o design.  
-✔ **Adicionei uma nota no final** reforçando que foi feito para um teste técnico.  
 
