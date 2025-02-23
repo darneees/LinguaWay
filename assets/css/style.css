@@ -289,7 +289,7 @@ body {
     flex-direction: row;
     gap: 1rem;
     z-index: 2;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .section-text-wrap h2 {
@@ -298,6 +298,7 @@ body {
     font-weight: 400;
     font-size: 1rem;
     animation: move-rtl 18000ms linear infinite;
+    overflow: hidden;
 }
 
 /* sessão 02 */
