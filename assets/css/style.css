@@ -13,13 +13,14 @@ body {
 }
 
 :root {
-    --white-10: #F4F4F4;
+    --white-10: #eaebed;
     --yellow-10: #f0c740;
     --blue-10: #0d1e43;
     --orange-10: #FF8C42;
     --orange-20: #a75b2b;
     --black-10: #121212;
     --green-10: #209f80;
+    --shadow: rgba(0, 0, 0, 0.35) 0 5px 20px;
 }
 
 /* sessão 01 */
@@ -73,7 +74,7 @@ body {
     font-weight: 800;
 }
 
-.section-article h1 > span {
+.section-article h1>span {
     color: var(--yellow-10);
 }
 
@@ -100,6 +101,7 @@ body {
     justify-content: center;
     gap: .3rem;
     font-family: "Raleway", sans-serif;
+    font-weight: 500;
     font-size: 1.1rem;
     padding: 1.5rem 2rem;
     border: none;
@@ -111,10 +113,15 @@ body {
     background-color: var(--orange-20);
 }
 
+.section-article-cta button ion-icon {
+    rotate: -45deg;
+} 
+
 .section-article-cta p {
     color: var(--green-10);
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
+    font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -142,25 +149,132 @@ body {
     width: 90%;
 }
 
-.section-picture :nth-child(3) {
+.section-picture :nth-child(6) {
     position: absolute;
     top: 2rem;
     left: 5rem;
     z-index: -1;
+    animation: zoomIn;
+    animation-duration: 1.5s;
 }
 
-.section-picture :nth-child(4) {
+.section-picture :nth-child(7) {
     position: absolute;
     bottom: 3rem;
-    left: -5rem;
+    left: -3rem;
     z-index: -1;
+    animation: zoomIn;
+    animation-duration: 1.5s;
 }
 
-.section-picture :nth-child(5) {
+.section-picture :nth-child(8) {
     position: absolute;
     bottom: 8rem;
     right: -4rem;
     z-index: -1;
+    animation: zoomIn;
+    animation-duration: 1.5s;
+}
+
+.section-school {
+    background-color: var(--white-10);
+    box-shadow: var(--shadow);
+    position: absolute;
+    width: 14em;
+    height: 4.5rem;
+    top: 3.5rem;
+    right: -2rem;
+    border-radius: 1.2rem;
+    padding: .5rem;
+    display:flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: row;
+    gap: .75rem;
+}
+
+.school-icon {
+    background: var(--yellow-10);
+    color: var(--white-10);
+    width: 3.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .9rem;
+}
+
+.school-icon ion-icon {
+    font-size: 1.65rem;
+}
+
+.school-text {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.school-text h2 {
+    color: var(--black-10);
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.38rem;
+    font-weight: 600;
+}
+
+.school-text p {
+    color: var(--black-10);
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    font-weight: 400;
+    opacity: .5;
+}
+
+.section-goole {
+    background-color: var(--white-10);
+    box-shadow: var(--shadow);
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    bottom: 10rem;
+    left: -2rem;
+    rotate: -10deg;
+    border-radius: 1.2rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.section-goole ion-icon {
+    color: var(--blue-10);
+    font-size: 1.5rem;
+}
+
+.section-rates {
+    background-color: var(--white-10);
+    box-shadow: var(--shadow);
+    color: var(--black-10);
+    position: absolute;
+    width: 5.5rem;
+    height: 4rem;
+    bottom: 10rem;
+    right: -2rem;
+    rotate: 10deg;
+    border-radius: 1.2rem;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: .2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.section-rates ion-icon {
+    color: var(--orange-10);
+    font-size: 1.5rem;
 }
 
 .section-text-wrap {
@@ -187,7 +301,7 @@ body {
 
 /* sessão 02 */
 .text-section {
-    background-color: var(--blue-10);
+    background-color: var(--white-10);
     width: 100%;
     height: 100vh;
     position: relative;
@@ -204,6 +318,7 @@ body {
     0% {
         transform: translateX(50%);
     }
+
     100% {
         transform: translateX(-850%);
     }
@@ -216,24 +331,143 @@ body {
 }
 
 /* respisividade */
-@media (min-width: 1200px) {
-    
-}
 @media (1000px<=width<=1199px) {
-
-}
-@media (680px<=width<=999px) {
     .hero-section {
         height: auto;
         padding: 6.3rem 0 0 0;
+        align-items: center;
+        justify-content: center;
         flex-direction: column;
         gap: 3.3rem;
     }
 
-    .section-article {
-        width: 85%;
+    .section-school {
+        width: 13rem;
+        height: 4rem;
+        top: -2rem;
+        right: 0;
+        gap: .8rem;
+    }
+
+    .school-icon {
+        width: 3rem;
+    }
+
+    .school-icon ion-icon {
+        font-size: 1.3rem;
+    }
+
+    .school-text h2 {
+        font-size: 1.25rem;
     }
     
+    .school-text p {
+        font-size: .85rem;
+    }
+
+    .section-article {
+        width: 55%;
+    }
+
+    .section-article h1 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .section-picture {
+        width: 48%;
+    }
+
+    .section-picture .desktop {
+        display: none;
+    }
+
+    .section-picture .mobile {
+        display: flex;
+    }
+
+    .section-picture :nth-child(6) {
+        position: absolute;
+        top: -3rem;
+        left: 2rem;
+        width: 80%;
+    }
+
+    .section-picture :nth-child(7) {
+        display: flex;
+        width: 25%;
+        bottom: 4rem;
+        left: -1rem;
+    }
+
+    .section-picture :nth-child(8) {
+        display: flex;
+        width: 33%;
+        right: -1rem;
+        bottom: 4rem;
+    }
+}
+
+@media (680px<=width<=999px) {
+    .hero-section {
+        height: auto;
+        padding: 6.3rem 0 0 0;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 3.3rem;
+    }
+
+    .section-school {
+        width: 13rem;
+        height: 4rem;
+        top: -2rem;
+        right: 1rem;
+        gap: .8rem;
+    }
+
+    .school-icon {
+        width: 3rem;
+    }
+
+    .school-icon ion-icon {
+        font-size: 1.3rem;
+    }
+
+    .school-text h2 {
+        font-size: 1.25rem;
+    }
+    
+    .school-text p {
+        font-size: .85rem;
+    }
+
+    .section-goole {
+        width: 3.3rem;
+        height: 3.3rem;
+        bottom: 4rem;
+        left: -.5rem;
+    }
+    
+    .section-goole ion-icon {
+        font-size: 1.15rem;
+    }
+
+    .section-rates {
+        width: 5rem;
+        height: 4rem;
+        bottom: 10rem;
+        right: 0;
+    }
+    
+    .section-rates ion-icon {
+        font-size: 1.2rem;
+    }
+
+    .section-article {
+        width: 70%;
+    }
+
     .section-article h1 {
         font-size: 2.5rem;
         width: 100%;
@@ -244,41 +478,37 @@ body {
     }
 
     .section-picture {
-        width: 80%;
+        width: 60%;
     }
 
     .section-picture .desktop {
         display: none;
     }
-    
+
     .section-picture .mobile {
         display: flex;
     }
 
-    .section-picture :nth-child(3) {
+    .section-picture :nth-child(6) {
         position: absolute;
         top: -1.5rem;
-        left: 2rem;
-        width: 50%;
-    }
-    
-    .section-picture :nth-child(4) {
-        display: flex;
-        width: 30%;
         left: -1rem;
+        width: 100%;
     }
 
-    .section-picture :nth-child(5) {
-        display: flex;
-        width: 30%;
-        right: 0;
-        bottom: 7rem;
+    .section-picture :nth-child(7) {
+        display: none;
+    }
+
+    .section-picture :nth-child(8) {
+        display: none;
     }
 
     @keyframes move-rtl {
         0% {
             transform: translateX(0%);
         }
+
         100% {
             transform: translateX(-400%);
         }
@@ -293,10 +523,56 @@ body {
         gap: 3.3rem;
     }
 
+    .section-school {
+        width: 7.7rem;
+        height: 3.8rem;
+        top: 0;
+        right: 4rem;
+        gap: .5rem;
+    }
+
+    .school-icon {
+        width: 2.8rem;
+    }
+
+    .school-icon ion-icon {
+        font-size: 1.3rem;
+    }
+
+    .school-text h2 {
+        font-size: 1.25rem;
+    }
+    
+    .school-text p {
+        display: none;
+    }
+
+    .section-goole {
+        width: 3.3rem;
+        height: 3.3rem;
+        bottom: 4rem;
+        left: -.5rem;
+    }
+    
+    .section-goole ion-icon {
+        font-size: 1.15rem;
+    }
+
+    .section-rates {
+        width: 5rem;
+        height: 4rem;
+        bottom: 13rem;
+        right: 0;
+    }
+    
+    .section-rates ion-icon {
+        font-size: 1.2rem;
+    }
+
     .section-article {
         width: 85%;
     }
-    
+
     .section-article h1 {
         font-size: 2.5rem;
         width: 100%;
@@ -313,25 +589,25 @@ body {
     .section-picture .desktop {
         display: none;
     }
-    
+
     .section-picture .mobile {
         display: flex;
     }
 
-    .section-picture :nth-child(3) {
+    .section-picture :nth-child(6) {
         position: absolute;
         top: -1.5rem;
         left: 2rem;
         width: 70%;
     }
-    
-    .section-picture :nth-child(4) {
+
+    .section-picture :nth-child(7) {
         display: flex;
         width: 30%;
         left: -1rem;
     }
 
-    .section-picture :nth-child(5) {
+    .section-picture :nth-child(8) {
         display: flex;
         width: 30%;
         right: 0;
@@ -342,6 +618,7 @@ body {
         0% {
             transform: translateX(0%);
         }
+
         100% {
             transform: translateX(-400%);
         }
@@ -356,10 +633,57 @@ body {
         gap: 3.3rem;
     }
 
+    .section-school {
+        width: 7.7rem;
+        height: 3.8rem;
+        top: -3rem;
+        right: 5.5rem;
+        gap: .5rem;
+    }
+
+    .school-icon {
+        width: 2.8rem;
+    }
+
+    .school-icon ion-icon {
+        font-size: 1.3rem;
+    }
+
+    .school-text h2 {
+        font-size: 1.25rem;
+    }
+    
+    .school-text p {
+        display: none;
+    }
+
+    .section-goole {
+        width: 3.3rem;
+        height: 3.3rem;
+        bottom: 4rem;
+        left: -.5rem;
+    }
+    
+    .section-goole ion-icon {
+        font-size: 1.15rem;
+    }
+
+    .section-rates {
+        width: 5rem;
+        height: 4rem;
+        bottom: 13rem;
+        right: 0;
+    }
+    
+    .section-rates ion-icon {
+        font-size: 1.2rem;
+    }
+    
+
     .section-article {
         width: 85%;
     }
-    
+
     .section-article h1 {
         font-size: 2.5rem;
         width: 95%;
@@ -376,20 +700,20 @@ body {
     .section-picture .desktop {
         display: none;
     }
-    
+
     .section-picture .mobile {
         display: flex;
     }
 
-    .section-picture :nth-child(3) {
+    .section-picture :nth-child(6) {
         position: absolute;
         top: -1.5rem;
         left: 0;
         width: 100%;
     }
-    
-    .section-picture :nth-child(4),
-    .section-picture :nth-child(5) {
+
+    .section-picture :nth-child(7),
+    .section-picture :nth-child(8) {
         display: none;
     }
 
@@ -397,6 +721,7 @@ body {
         0% {
             transform: translateX(0%);
         }
+
         100% {
             transform: translateX(-400%);
         }
