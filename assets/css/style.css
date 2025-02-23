@@ -7,6 +7,11 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
 :root {
     --white-10: #F4F4F4;
     --yellow-10: #f0c740;
@@ -17,19 +22,40 @@
     --green-10: #209f80;
 }
 
-main {
+/* sessão 01 */
+.hero-section {
     background-color: var(--white-10);
     width: 100%;
     height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 2rem;
+    gap: 4rem;
     z-index: 1;
 }
 
-.main-article {
+.main-logo {
+    color: var(--blue-10);
+    position: fixed;
+    top: 2.2rem;
+    left: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    user-select: none;
+    z-index: 999;
+}
+
+.main-logo span {
+    color: var(--yellow-10);
+}
+
+.section-article {
     width: 38%;
     height: 100%;
     display: flex;
@@ -40,18 +66,18 @@ main {
     z-index: 2;
 }
 
-.main-article h1 {
+.section-article h1 {
     color: var(--blue-10);
     font-size: 3.5rem;
     font-family: "Raleway", sans-serif;
     font-weight: 800;
 }
 
-.main-article h1 > span {
+.section-article h1 > span {
     color: var(--yellow-10);
 }
 
-.main-article h3 {
+.section-article h3 {
     width: 100%;
     color: var(--black-10);
     font-size: 1.3rem;
@@ -59,14 +85,14 @@ main {
     font-weight: 400;
 }
 
-.main-article-cta {
+.section-article-cta {
     display: flex;
     flex-direction: column;
     align-items: start;
     gap: .5rem;
 }
 
-.main-article-cta button {
+.section-article-cta button {
     background-color: var(--orange-10);
     color: var(--white-10);
     display: flex;
@@ -81,11 +107,11 @@ main {
     cursor: pointer;
 }
 
-.main-article-cta button:hover {
+.section-article-cta button:hover {
     background-color: var(--orange-20);
 }
 
-.main-article-cta p {
+.section-article-cta p {
     color: var(--green-10);
     font-size: 1rem;
     font-family: "Montserrat", sans-serif;
@@ -96,7 +122,7 @@ main {
     opacity: .8;
 }
 
-.main-picture {
+.section-picture {
     position: relative;
     width: 35%;
     height: 100%;
@@ -104,34 +130,40 @@ main {
     align-items: end;
     justify-content: center;
     z-index: 3;
+    user-select: none;
 }
 
-.main-picture .person {
+.section-picture .desktop {
     width: 90%;
 }
 
-.main-picture :nth-child(2) {
+.section-picture .mobile {
+    display: none;
+    width: 90%;
+}
+
+.section-picture :nth-child(3) {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 2rem;
+    left: 5rem;
     z-index: -1;
 }
 
-.main-picture :nth-child(3) {
+.section-picture :nth-child(4) {
     position: absolute;
-    bottom: 2.2rem;
+    bottom: 3rem;
     left: -5rem;
     z-index: -1;
 }
 
-.main-picture :nth-child(4) {
+.section-picture :nth-child(5) {
     position: absolute;
-    bottom: 6rem;
+    bottom: 8rem;
     right: -4rem;
     z-index: -1;
 }
 
-.main-text-wrap {
+.section-text-wrap {
     background-color: var(--green-10);
     width: 100%;
     height: 8vh;
@@ -145,19 +177,228 @@ main {
     z-index: 2;
 }
 
-.main-text-wrap h2 {
+.section-text-wrap h2 {
     color: var(--white-10);
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 1rem;
-    animation: move-rtl 6000ms linear infinite;
+    animation: move-rtl 18000ms linear infinite;
 }
 
+/* sessão 02 */
+.text-section {
+    background-color: var(--blue-10);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 4rem;
+    z-index: 1;
+}
+
+/* animação */
 @keyframes move-rtl {
     0% {
-        transform: translateX(0);
+        transform: translateX(50%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-850%);
+    }
+}
+
+/* seleção */
+::selection {
+    background-color: var(--green-10);
+    color: var(--white-10);
+}
+
+/* respisividade */
+@media (min-width: 1200px) {
+    
+}
+@media (1000px<=width<=1199px) {
+
+}
+@media (680px<=width<=999px) {
+    .hero-section {
+        height: auto;
+        padding: 6.3rem 0 0 0;
+        flex-direction: column;
+        gap: 3.3rem;
+    }
+
+    .section-article {
+        width: 85%;
+    }
+    
+    .section-article h1 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .section-article h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-picture {
+        width: 80%;
+    }
+
+    .section-picture .desktop {
+        display: none;
+    }
+    
+    .section-picture .mobile {
+        display: flex;
+    }
+
+    .section-picture :nth-child(3) {
+        position: absolute;
+        top: -1.5rem;
+        left: 2rem;
+        width: 50%;
+    }
+    
+    .section-picture :nth-child(4) {
+        display: flex;
+        width: 30%;
+        left: -1rem;
+    }
+
+    .section-picture :nth-child(5) {
+        display: flex;
+        width: 30%;
+        right: 0;
+        bottom: 7rem;
+    }
+
+    @keyframes move-rtl {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+}
+
+@media (430px<=width<=679px) {
+    .hero-section {
+        height: auto;
+        padding: 6.3rem 0 0 0;
+        flex-direction: column;
+        gap: 3.3rem;
+    }
+
+    .section-article {
+        width: 85%;
+    }
+    
+    .section-article h1 {
+        font-size: 2.5rem;
+        width: 100%;
+    }
+
+    .section-article h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-picture {
+        width: 80%;
+    }
+
+    .section-picture .desktop {
+        display: none;
+    }
+    
+    .section-picture .mobile {
+        display: flex;
+    }
+
+    .section-picture :nth-child(3) {
+        position: absolute;
+        top: -1.5rem;
+        left: 2rem;
+        width: 70%;
+    }
+    
+    .section-picture :nth-child(4) {
+        display: flex;
+        width: 30%;
+        left: -1rem;
+    }
+
+    .section-picture :nth-child(5) {
+        display: flex;
+        width: 30%;
+        right: 0;
+        bottom: 7rem;
+    }
+
+    @keyframes move-rtl {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-400%);
+        }
+    }
+}
+
+@media (max-width: 429px) {
+    .hero-section {
+        height: auto;
+        padding: 6.3rem 0 0 0;
+        flex-direction: column;
+        gap: 3.3rem;
+    }
+
+    .section-article {
+        width: 85%;
+    }
+    
+    .section-article h1 {
+        font-size: 2.5rem;
+        width: 95%;
+    }
+
+    .section-article h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-picture {
+        width: 85%;
+    }
+
+    .section-picture .desktop {
+        display: none;
+    }
+    
+    .section-picture .mobile {
+        display: flex;
+    }
+
+    .section-picture :nth-child(3) {
+        position: absolute;
+        top: -1.5rem;
+        left: 0;
+        width: 100%;
+    }
+    
+    .section-picture :nth-child(4),
+    .section-picture :nth-child(5) {
+        display: none;
+    }
+
+    @keyframes move-rtl {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(-400%);
+        }
     }
 }
