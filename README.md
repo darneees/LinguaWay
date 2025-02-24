@@ -18,7 +18,7 @@ Este repositório contém o código-fonte de uma **landing page responsiva** par
 ## 🔠 Hierarquia Tipográfica
 
 | Elemento         | Fonte       | Peso  |
-|-----------------|------------|------|---------|
+|-----------------|------------|------|
 | **Título Principal (H1)** | Raleway | ExtraBold (800) |
 | **Subtítulo (H2, H3)** | Montserrat | SemiBold (600) |
 | **Parágrafo (P)** | Montserrat | Regular (400) |
