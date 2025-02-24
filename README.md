@@ -20,9 +20,9 @@ Este repositório contém o código-fonte de uma **landing page responsiva** par
 | Elemento         | Fonte       | Peso  |
 |-----------------|------------|------|
 | **Título Principal (H1)** | Raleway | ExtraBold (800) |
-| **Subtítulo (H2, H3)** | Montserrat | SemiBold (600) |
+| **Subtítulo (H2, H3)** | Montserrat | SemiBold (400) |
 | **Parágrafo (P)** | Montserrat | Regular (400) |
-| **Botões (CTA)** | Raleway | Bold (700) |
+| **Botões (CTA)** | Raleway | Bold (500) |
 
 ## 📌 Tecnologias Utilizadas
 
