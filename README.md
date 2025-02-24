@@ -8,19 +8,21 @@ Este repositório contém o código-fonte de uma **landing page responsiva** par
 
 | Cor         | Código Hex   | Significado |
 |------------|------------|------------|
-| 🔶 **Laranja** | `#FF8C42` | Energia e criatividade |
+| 🟠 **Laranja** | `#FF8C42` | Energia e criatividade |
 | 🟡 **Amarelo** | `#FFD447` | Destaque e otimismo |
-| 🔵 **Azul Escuro** | `#2A3D66` | Confiança e inteligência |
-| ⚪ **Cinza Suave** | `#F4F4F4` | Equilíbrio e minimalismo |
+| 🔵 **Azul Escuro** | `#0d1e43` | Confiança e inteligência |
+| ⚪ **Cinza Suave** | `#EAEBED` | Equilíbrio e minimalismo |
+| 🟢 **Verde** | `#209F80` | harmonia e frescor |
+| ⚫ **Preto** | `#121212` | Representa sofisticação, elegância e contraste |
 
 ## 🔠 Hierarquia Tipográfica
 
-| Elemento         | Fonte       | Peso  | Tamanho |
+| Elemento         | Fonte       | Peso  |
 |-----------------|------------|------|---------|
-| **Título Principal (H1)** | Raleway | ExtraBold (800) | 40px - 48px |
-| **Subtítulo (H2, H3)** | Montserrat | SemiBold (600) | 28px - 36px |
-| **Parágrafo (P)** | Montserrat | Regular (400) | 16px - 18px |
-| **Botões (CTA)** | Raleway | Bold (700) | 18px - 22px (Uppercase) |
+| **Título Principal (H1)** | Raleway | ExtraBold (800) |
+| **Subtítulo (H2, H3)** | Montserrat | SemiBold (600) |
+| **Parágrafo (P)** | Montserrat | Regular (400) |
+| **Botões (CTA)** | Raleway | Bold (700) |
 
 ## 📌 Tecnologias Utilizadas
 
@@ -33,7 +35,6 @@ Este repositório contém o código-fonte de uma **landing page responsiva** par
 ```
 git clone https://github.com/darneees/LinguaWay.git
 ```
-
 2. Abra o arquivo index.html no navegador.
 
 📢 Observação: Este projeto foi desenvolvido como parte de um teste técnico e segue as diretrizes exigidas, utilizando apenas HTML e CSS.
